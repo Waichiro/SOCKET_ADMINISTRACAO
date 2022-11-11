@@ -24,7 +24,7 @@ while(True):
 
     if mensagem == '1':
         
-        envio = f'{mensagem}'.encode("UTF-8")
+        envio = f'{mensagem};1'.encode("UTF-8")
 
         gerente.sendto(envio, serv)
 

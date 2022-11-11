@@ -24,23 +24,32 @@ while (True):
 
     if comando[0] == '1':
         if check_pessoa == 'gerente':
-            resposta = f'Esta é uma resposta do 1 GERENTE'.encode("UTF-8")
+            resposta = str(dados).encode("UTF-8")
             servidor.sendto(resposta, endCliente)
 
         elif check_pessoa == 'funcionario':
 
-            data = {
-                'cod_venda': comando[2],
-                'nome': comando[3],
-                'data_venda': comando[5],
-                'valor_venda': comando[6]
-            }
+            try:
+                data = {
+                    'cod_funcionario': comando[7],
+                    'cod_venda': comando[2],
+                    'nome': comando[3],
+                    'loja': comando[4],
+                    'data_venda': comando[5],
+                    'valor_venda': comando[6]
+                }
 
-            resposta = str(comando).encode("UTF-8")
-            servidor.sendto(resposta, endCliente)
+                dados.append(data)
+
+                resposta = '\033[32mVenda feita com sucesso!\033[0;0m'.encode("UTF-8")
+                servidor.sendto(resposta, endCliente)
+            
+            except: 
+                resposta =  "\033[31mAlgo deu errado na venda!\033[0;0m".encode("UTF-8")
+                servidor.sendto(resposta, endCliente)
 
         else:
-            resposta = "Quem é você? COMANDO 1".encode("UTF-8")
+            resposta = "\033[31mAlgo deu errado!\033[0;0m".encode("UTF-8")
             servidor.sendto(resposta, endCliente)
 
     elif comando[0] == '2':
