@@ -41,9 +41,9 @@ serv = (HOST, PORT)
 
 while(True):
     print('''
-		Nº \t| Escolha:
-		1 \t| Fazer venda
-		2 \t| Encerrar funcionario
+    Nº \t| Escolha
+    1 \t| Fazer venda
+    2 \t| Encerrar funcionario
 	''')
 
     mensagem = input("Digite o número da opção que deseja realizar: ")
@@ -85,7 +85,7 @@ while(True):
             if id_loja <= 0 or id_loja > 5:
                 print('\033[31mDigite um valor valido!\033[0;0m')
 
-        loja = "Americansa" if id_loja == 1 else "Amazilviz" if id_loja == 2 else "Burguer" if id_loja == 3 else "McRonalds" if id_loja == 4 else "Cacau Choco"
+        loja = "Americansa" if id_loja == 1 else "Amazilviz" if id_loja == 2 else "Burguer Rei" if id_loja == 3 else "McRonalds" if id_loja == 4 else "Cacau Choco"
 
         res = True
         count = 0
