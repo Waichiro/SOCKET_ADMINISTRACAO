@@ -1,8 +1,7 @@
 import socket
 
-
-HOST = "localhost" 
-PORT = 9000             
+HOST = "localhost"
+PORT = 9000
 
 
 servidor = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -46,7 +45,6 @@ while (True):
                     valor = float(dados[x]['valor_venda'])
                     total_pedro += valor
 
-
             resposta = f'''
             FUNCIONARIO \t| TOTAL
             Ariane Santos \t| {round(total_ariane, 2)}
@@ -54,7 +52,7 @@ while (True):
             João Pedro \t\t| {round(total_joao, 2)}
             Pedro Queiroz \t| {round(total_pedro, 2)}
             '''.encode("UTF-8")
-            servidor.sendto(resposta, endCliente) 
+            servidor.sendto(resposta, endCliente)
 
         elif check_pessoa == 'funcionario':
 
@@ -70,11 +68,13 @@ while (True):
 
                 dados.append(data)
 
-                resposta = '\033[32mVenda feita com sucesso!\033[0;0m'.encode("UTF-8")
+                resposta = '\033[32mVenda feita com sucesso!\033[0;0m'.encode(
+                    "UTF-8")
                 servidor.sendto(resposta, endCliente)
-            
-            except: 
-                resposta =  "\033[31mAlgo deu errado na venda!\033[0;0m".encode("UTF-8")
+
+            except:
+                resposta = "\033[31mAlgo deu errado na venda!\033[0;0m".encode(
+                    "UTF-8")
                 servidor.sendto(resposta, endCliente)
 
         else:
@@ -120,7 +120,6 @@ while (True):
         '''.encode("UTF-8")
         servidor.sendto(resposta, endCliente)
 
-    
     elif comando[0] == '3':
         resposta = str(dados).encode("UTF-8")
         servidor.sendto(resposta, endCliente)
@@ -132,7 +131,7 @@ while (True):
     elif comando[0] == '5':
         resposta = f'Esta é uma resposta do 5'.encode("UTF-8")
         servidor.sendto(resposta, endCliente)
-    
+
     else:
         resposta = f'ERRO'.encode("UTF-8")
         servidor.sendto(resposta, endCliente)
@@ -140,5 +139,3 @@ while (True):
 
 print("Saindo...")
 servidor.close()
-    
-
