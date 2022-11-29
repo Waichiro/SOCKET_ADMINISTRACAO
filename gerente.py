@@ -1,7 +1,7 @@
 import socket
 from datetime import datetime
 
-from funcionario import data_valida
+from functions import selecionar_loja, selecionar_periodo
 
 HOST = "localhost"
 PORT = 9000
@@ -13,6 +13,7 @@ serv = (HOST, PORT)
 while (True):
     print(f'''
     {"-" * 20} GERENTE {"-" * 20}
+
     Nº \t| ESCOLHA
     1 \t| Total de Vendas (Vendedor)
     2 \t| Total de Vendas (Loja)
@@ -49,22 +50,12 @@ while (True):
 
     elif mensagem == '3':
 
-        id_loja = 0
-        while id_loja <= 0 or id_loja > 5:
-            print('''
-            Nº \t| NOME DA LOJA
-            1 \t| Americansa
-            2 \t| Amazilviz
-            3 \t| Burguer Rei
-            4 \t| McRonalds
-            5 \t| Cacau Choco
-            ''')
-        id_loja = int(input("Selecione a loja: "))
+        retornoPeriodo = selecionar_periodo()
+        data_inicial = retornoPeriodo[0]
+        data_final = retornoPeriodo[1]
 
-        data_inicial = input(
-            "Digite a data inicial do período(Ex: 01/01/2022): ")
-
-        envio = f'{[id_loja, ]};1'.encode("UTF-8")
+        envio = f'{mensagem};1;{data_inicial};{data_final}'.encode(
+            "UTF-8")
 
         gerente.sendto(envio, serv)
 
