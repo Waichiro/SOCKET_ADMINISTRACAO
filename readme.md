@@ -26,7 +26,7 @@ Testes realizados no Windows 11 22H2
 
 - Se o ambiente for Windows poderá executar o arquivo executarProjeto.bat que será aberto 3 janelas já rodando os 3 arquivos, servidor, funcionário e gerente.
 
-##Projeto
+## Projeto
 
 Separado em três arquivos(servidor, gerente e funcionario), o socket 
 assim como o professor pediu, é um gerenciador de vendas, onde o funcionario 
