@@ -10,3 +10,4 @@ Testes realizados no windows 11 22H2
 
 Para iniciar o projeto selecione o programa padrão como Python que abre o arquivo .py
 Interpretador do python esteja nas variáveis de ambiente.
+O projeto já inicia com 11 vendas realizadas totalizando 11000.00 em vendas pela funcionário Ariane Gomes
