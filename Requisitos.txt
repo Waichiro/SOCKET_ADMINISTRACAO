@@ -1,0 +1,12 @@
+O projeto foi realizado com a linguagem python e utiliza as seguintes lib's:
+
+socket
+datetime
+random
+functions (lib local)
+
+versão do python utilizado para roda o projeto: Python 3.11.0
+Testes realizados no windows 11 22H2
+
+Para iniciar o projeto selecione o programa padrão como Python que abre o arquivo .py
+Interpretador do python esteja nas variáveis de ambiente.
