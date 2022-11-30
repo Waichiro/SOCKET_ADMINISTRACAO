@@ -4,7 +4,7 @@ Equipe:
 - Ariane Santos Gomes - 1272121526
 - Gabriel Santos da Silva - 1272121748
 - João Pedro Oliveira dos Santos Silva - 1272117418
-- Pedro Queiróz - 1272123228
+- Pedro Azevedo de Queiróz - 1272123228
 
 ## Dependências
 
@@ -20,7 +20,7 @@ Versão do python utilizado para roda o projeto: Python 3.11.0
 
 Testes realizados no Windows 11 22H2
 
-- Para iniciar o projeto selecione o programa padrão Python para abrir o arquivo de extensão .py
+- Para iniciar o projeto selecione o programa padrão como 'Python' para abrir o arquivo de extensão .py
 
 - Interpretador do python esteja nas variáveis de ambiente.
 
