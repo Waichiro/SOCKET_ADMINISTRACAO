@@ -36,18 +36,23 @@ onde mais foi vendido os produtos.
 
 Para rodar o sistema, primeiro você ira executar:
 
+```python
 python servidor.py
-
+```
 Logo após, deverá rodar o socket de funcionario:
 
+```python
 python funcionario.py
+```
 
 No socket de funcionario já poderá fazer, a venda do primeiro produto, onde você deverá,
 selecionar a opção 1, onde você irá selecionar o vendedor, logo após a loja.
 
 Logo após, deverá rodar o socket de gerente:
 
+```python
 python gerente.py
+```
 
 No socket de gerente você consegue realizar todas as funções e filtrar o total de vendas, tanto por vendedor
 quanto por loja, total de venda de uma loja em um determinado período e também a melhor loja e vendedor.
